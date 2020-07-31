@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            app:expanded="true">
+
+            <TextView
+                android:id="@+id/filterLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:background="#636265"
+                android:gravity="center"
+                android:text="Search Top">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/design_default_color_secondary"
+                android:gravity="center"
+                android:text="Search Bar"/>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <tk.keier.recyclerview.nest.nestchildrecyclerview.ParentRecyclerView
+            android:id="@+id/parentRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+</LinearLayout>
